@@ -1,0 +1,61 @@
+
+/* Putting universal selectors into header.modules just because it's the first component in workflow */
+
+/********
+RESET
+********/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/****************
+CUSTOM PROPERTIES
+****************/
+
+:root {
+  --light-green: #7ed56f;
+  --light-green-rgb: 126, 213, 111;
+
+  --medium-green: #55c57a;
+
+  --dark-green: #28b485;
+  --dark-green-rgb: 40, 180, 133;
+
+  --default-font: "Lato", sans-serif;
+}
+
+/****************
+GLOBAL SELECTORS
+****************/
+
+body {
+  color: #777;
+  font-family: var(--default-font);
+  font-weight: 400;
+  font-size: .5rem;
+  line-height: 1.7;
+  padding: 30px;
+}
+
+
+/**************
+CLASS SELECTORS
+**************/
+
+header {
+  height: 91vh;
+
+  /* Hero Banner */
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(var(--light-green-rgb), 0.75),
+    rgba(var(--dark-green-rgb), 0.75)),
+    url(../../img/hero.jpg);
+  background-size: cover;
+  background-position: right;
+
+}
+ 
