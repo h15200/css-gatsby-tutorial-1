@@ -1,9 +1,14 @@
 
 /* Putting universal selectors into header.modules just because it's the first component in workflow */
 
-/********
+/*********************************
+GLOBAL SELECTORS
+*********************************/
+
+
+/*****
 RESET
-********/
+*****/
 
 * {
   box-sizing: border-box;
@@ -27,9 +32,9 @@ CUSTOM PROPERTIES
   --default-font: "Lato", sans-serif;
 }
 
-/****************
-GLOBAL SELECTORS
-****************/
+/***
+BODY
+***/
 
 body {
   color: #777;
@@ -40,12 +45,14 @@ body {
   padding: 30px;
 }
 
+/********************************
+HEADER MODULE
+********************************/
 
-/**************
-CLASS SELECTORS
-**************/
+
 
 header {
+  /* To fit whole page with body padding without scroll bar */
   height: 91vh;
 
   /* Hero Banner */
@@ -59,6 +66,7 @@ header {
 
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
+  /* To use position absolute on .logo and .textbox */
   position: relative;
 }
  
@@ -72,13 +80,20 @@ so you can style the absolute positioning directly on the image. Size needs to b
 }
 
 .textBox{
+  /* Center div in the center (slightly higher because of polygon clip) of the header */
   position: absolute;
   left: 50%;
   top: 40%;
   transform: translate(-50%, -50%);
 
+  /* Center content of .textBox */
   text-align: center; 
 }
+
+
+/**
+h1
+**/ 
 
 .headingPrimary {
   color: #fff;
