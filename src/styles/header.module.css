@@ -95,21 +95,61 @@ so you can style the absolute positioning directly on the image. Size needs to b
 h1
 **/ 
 
+
+
 .headingPrimary {
+  animation-name: fromLeft;
+  animation-duration: 5s;
   color: #fff;
   text-transform: uppercase;
 }
+
 
 .headingPrimaryMain{
   display: block;
   font-size: 3.5rem;
   font-weight: 400;
   letter-spacing: 2rem;
+  animation-name: moveFromRight;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
 }
 
 .headingPrimarySub{
+
   display: block;
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 1rem;
+  animation-name: moveFromLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes moveFromLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-100px);
+  }
+  80% {
+    transform: translate(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+    opacity: 0;
+    transform: translate(100px);
+  }
+  80% {
+    transform: translate(-10px)rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
