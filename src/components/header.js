@@ -23,6 +23,9 @@ const Header = () => {
           <span className={headerStyles.headingPrimaryMain}>Outdoors</span>
           <span className={headerStyles.headingPrimarySub}>is where life happens</span>
         </h1>
+        <a href="#" className={`${headerStyles.btn} ${headerStyles.btnWhite}`}>
+          Discover our tours
+        </a>
       </div>
     </header>
   )
