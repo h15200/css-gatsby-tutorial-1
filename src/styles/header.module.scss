@@ -19,26 +19,23 @@ RESET
 /****************
 CUSTOM PROPERTIES
 ****************/
+$color-primary: #55c57a;
+$color-primary-light:  #7ed56f;
+$color-primary-dark: #28b485;
 
-:root {
-  --light-green: #7ed56f;
-  --light-green-rgb: 126, 213, 111;
+$color-grey-dark: #777;
+$color-white: #fff;
+$color-black: #000;
 
-  --medium-green: #55c57a;
 
-  --dark-green: #28b485;
-  --dark-green-rgb: 40, 180, 133;
-
-  --default-font: "Lato", sans-serif;
-}
 
 /***
 BODY
 ***/
 
 body {
-  color: #777;
-  font-family: var(--default-font);
+  color: $color-grey-dark;
+  font-family: "Lato", san-serif;
   font-weight: 400;
   line-height: 1.7;
   padding: 1.875rem;
@@ -57,8 +54,8 @@ header {
   /* Hero Banner */
   background-image: linear-gradient(
     to right bottom,
-    rgba(var(--light-green-rgb), 0.8),
-    rgba(var(--dark-green-rgb), 0.8)),
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark , 0.8)),
     url(../images/hero.jpg);
   background-size: cover;
   background-position: right;
@@ -96,7 +93,7 @@ h1
 .header_headingPrimary {
   animation-name: fromLeft;
   animation-duration: 5s;
-  color: #fff;
+  color: $color-white;
   margin-bottom: 2rem;
   text-transform: uppercase;
 }
@@ -151,8 +148,8 @@ h1
   }
 }
 
-.header_btn:link,
-.header_btn:visited {
+.btn:link,
+.btn:visited {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
@@ -164,7 +161,7 @@ h1
 
 }
 
-.header_btn___animated {
+.btn___animated {
   animation-name: moveFromBelow;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -184,22 +181,22 @@ h1
   }
   }
 
-.header_btn:hover {
+.btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,.2);  
+  box-shadow: 0 10px 20px rgba($color-black, .2);  
 }
 
-.header_btn:active {
+.btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0,0,0,.2);  
+  box-shadow: 0 5px 10px rgba($color-black, .2);  
 }
 
-.header_btn___white {
-  background-color: #fff;
-  color: #777;
+.btn___white {
+  background-color: $color-white;
+  color: $color-grey-dark;
 }
 
-.header_btn::after {
+.btn::after {
   content: "";
   display: inline-block;
   height: 100%;
@@ -212,13 +209,13 @@ h1
   transition: all .3s;
 }
 
-.header_btn___white::after {
-  background-color: #fff;
+.btn___white::after {
+  background-color: $color-white;
 }
 
 /* get bigger and fade to nothing over a time specified by the rest state in .btn::after transition */
 
-.header_btn:hover::after {
+.btn:hover::after {
   transform: scale(1.4, 1.6);
   opacity: 0;  
 }

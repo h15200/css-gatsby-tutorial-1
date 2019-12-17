@@ -23,7 +23,7 @@ const Header = () => {
           <span className={headerStyles.header_headingPrimary___main}>Outdoors</span>
           <span className={headerStyles.header_headingPrimary___sub}>is where life happens</span>
         </h1>
-        <a href="#" className={`${headerStyles.header_btn} ${headerStyles.header_btn___white} ${headerStyles.header_btn___animated}`}>
+        <a href="#" className={`${headerStyles.btn} ${headerStyles.btn___white} ${headerStyles.btn___animated}`}>
           Discover our tours
         </a>
       </div>
