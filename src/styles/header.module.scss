@@ -40,9 +40,8 @@ body {
   color: #777;
   font-family: var(--default-font);
   font-weight: 400;
-  font-size: .5rem;
   line-height: 1.7;
-  padding: 30px;
+  padding: 1.875rem;
 }
 
 /********************************
@@ -73,13 +72,13 @@ header {
 /* With gatsby img components, there exists a div container already with position: relative 
 so you can style the absolute positioning directly on the image. Size needs to be adjusted in graphql query */
 
-.logo{
+.header_logo {
   position: absolute;
-  top: 40px;
-  left: 40px
+  top: 2.5rem;
+  left: 2.5rem;
 }
 
-.textBox{
+.header_textBox {
   /* Center div in the center (slightly higher because of polygon clip) of the header */
   position: absolute;
   left: 50%;
@@ -90,14 +89,11 @@ so you can style the absolute positioning directly on the image. Size needs to b
   text-align: center; 
 }
 
-
 /**
 h1
 **/ 
 
-
-
-.headingPrimary {
+.header_headingPrimary {
   animation-name: fromLeft;
   animation-duration: 5s;
   color: #fff;
@@ -106,22 +102,22 @@ h1
 }
 
 
-.headingPrimaryMain{
+.header_headingPrimary___main{
   display: block;
-  font-size: 3.5rem;
+  font-size: 3.4rem;
   font-weight: 400;
-  letter-spacing: 2rem;
+  letter-spacing: .9em;
   animation-name: moveFromRight;
   animation-duration: 1.5s;
   animation-timing-function: ease-out;
 }
 
-.headingPrimarySub{
+.header_headingPrimary___sub{
 
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  letter-spacing: 1rem;
+  letter-spacing: .8em;
   animation-name: moveFromLeft;
   animation-duration: 1.5s;
   animation-timing-function: ease-out;
@@ -130,10 +126,10 @@ h1
 @keyframes moveFromLeft {
   0% {
     opacity: 0;
-    transform: translate(-100px);
+    transform: translate(-6rem);
   }
   80% {
-    transform: translate(10px);
+    transform: translate(.625rem);
   }
   100% {
     opacity: 1;
@@ -144,10 +140,10 @@ h1
 @keyframes moveFromRight {
   0% {
     opacity: 0;
-    transform: translate(100px);
+    transform: translate(6rem);
   }
   80% {
-    transform: translate(-10px)rotate(180deg);
+    transform: translate(-.625rem);
   }
   100% {
     opacity: 1;
@@ -155,27 +151,87 @@ h1
   }
 }
 
-.btn:link,
-.btn:visited {
+.header_btn:link,
+.header_btn:visited {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 100px;
-  padding: 15px 40px;
+  border-radius: 6.5em;
+  padding: 1em 2.5em;
   transition: all 0.2s;
+  /* to position the ::after element on top and behind this element */
+  position: relative;
+
 }
 
-.btn:hover {
+.header_btn___animated {
+  animation-name: moveFromBelow;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveFromBelow {
+  0% {
+    opacity: 0;
+    transform: translateY(3em);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  }
+
+.header_btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0,0,0,.2);  
 }
 
-.btn:active {
+.header_btn:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0,0,0,.2);  
 }
 
-.btnWhite {
+.header_btn___white {
   background-color: #fff;
   color: #777;
+}
+
+.header_btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 6.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .3s;
+}
+
+.header_btn___white::after {
+  background-color: #fff;
+}
+
+/* get bigger and fade to nothing over a time specified by the rest state in .btn::after transition */
+
+.header_btn:hover::after {
+  transform: scale(1.4, 1.6);
+  opacity: 0;  
+}
+
+@media only screen and (max-width: 850px) {
+  .header_headingPrimary___main{
+    font-size: 5vw;
+  }
+  .header_headingPrimary___sub{
+    font-size: 3vw;
+  }
+  .header_btn:link,
+  .header-btn:visited{
+    font-size: 2vw;
+  }
 }
