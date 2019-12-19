@@ -1,7 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import headerStyles from "../styles/header.module.scss"
+import headerStyles from "../styles/layout/header.module.scss"
+import buttonStyles from '../styles/components/button.module.scss'
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -23,7 +24,7 @@ const Header = () => {
           <span className={headerStyles.header_headingPrimary___main}>Outdoors</span>
           <span className={headerStyles.header_headingPrimary___sub}>is where life happens</span>
         </h1>
-        <a href="#" className={`${headerStyles.btn} ${headerStyles.btn___white} ${headerStyles.btn___animated}`}>
+        <a href="#" className={`${buttonStyles.btn} ${buttonStyles.btn___white} ${buttonStyles.btn___animated}`}>
           Discover our tours
         </a>
       </div>

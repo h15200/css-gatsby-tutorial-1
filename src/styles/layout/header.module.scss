@@ -1,0 +1,93 @@
+@import '../main.scss';
+
+
+.header {
+  /* To fit whole page with body padding without scroll bar */
+  height: 91vh;
+
+  /* Hero Banner */
+  background-image: linear-gradient(to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)),
+    url(../../images/hero.jpg);
+  background-size: cover;
+  background-position: right;
+
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+  /* To use position absolute on .logo and .textbox */
+  position: relative;
+
+  /* With gatsby img components, there exists a div container already with position: relative 
+so you can style the absolute positioning directly on the image. Size needs to be adjusted in graphql query */
+
+  &_logo {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+  }
+
+  &_textBox {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+
+    /* Center content of .textBox */
+    text-align: center;
+
+  }
+
+}
+
+////////
+// h1 //
+////////
+
+.header_headingPrimary {
+  animation-name: fromLeft;
+  animation-duration: 5s;
+  color: $color-white;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+
+  &___main {
+    display: block;
+    font-size: 3.4rem;
+    font-weight: 400;
+    letter-spacing: .9em;
+    animation-name: moveFromRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+  }
+
+  &___sub {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: .8em;
+    animation-name: moveFromLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+  }
+
+}
+
+/////////////////
+// MEDIA QUERY //
+/////////////////
+
+@media only screen and (max-width: 850px) {
+  .header_headingPrimary___main {
+    font-size: 5vw;
+  }
+
+  .header_headingPrimary___sub {
+    font-size: 3vw;
+  }
+
+  .header_btn:link,
+  .header-btn:visited {
+    font-size: 2vw;
+  }
+}
