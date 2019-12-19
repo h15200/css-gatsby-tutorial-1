@@ -1,0 +1,49 @@
+$grid-width: 70rem;
+$grid-vertical-gutter: 4rem;
+$grid-horizontal-gutter: 3.5rem;
+
+.row {
+    max-width: $grid-width;
+    background-color: rgb(206, 203, 203);
+    margin: 0 auto;
+
+    &:first-of-type {
+        margin-top: 2em;
+    }
+
+    &:not(:last-of-type) {
+        margin-bottom: $grid-vertical-gutter;
+    }
+    // all columns
+    div {
+        display: inline-block; // A better alternative to floats if it's on a div
+        background-color: rgb(184, 184, 230);
+        &:not(:last-of-type) {
+            margin-right: $grid-horizontal-gutter;
+        }
+    }
+
+    // specify width for each column
+    .col_1_of_2 {
+        width: calc((100% - #{$grid-horizontal-gutter})/2);
+    }
+
+    .col_1_of_3 {
+        width: calc((100% - #{$grid-horizontal-gutter} * 2)/3);
+    }
+
+    .col_2_of_3 {
+        width: calc(((100% - #{$grid-horizontal-gutter} * 2)/3) * 2 + #{$grid-horizontal-gutter});
+    }
+
+    .col_1_of_4 {
+        width: calc((100% - #{$grid-horizontal-gutter} * 3)/4);
+    }
+    .col_2_of_4 {
+        width: calc( (100% - #{$grid-horizontal-gutter} * 3)/4 * 2 + #{$grid-horizontal-gutter} );
+    }
+    .col_3_of_4 {
+        width: calc((100% - #{$grid-horizontal-gutter} * 3)/4 * 3 + #{$grid-horizontal-gutter} * 2);
+    }
+}
+
