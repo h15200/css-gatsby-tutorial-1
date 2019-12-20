@@ -4,7 +4,7 @@ $grid-horizontal-gutter: 3.5rem;
 
 .row {
     max-width: $grid-width;
-    background-color: rgb(206, 203, 203);
+
     margin: 0 auto;
 
     &:first-of-type {
@@ -17,7 +17,7 @@ $grid-horizontal-gutter: 3.5rem;
     // all columns
     div {
         display: inline-block; // A better alternative to floats if it's on a div
-        background-color: rgb(184, 184, 230);
+
         &:not(:last-of-type) {
             margin-right: $grid-horizontal-gutter;
         }

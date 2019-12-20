@@ -32,7 +32,6 @@ so you can style the absolute positioning directly on the image. Size needs to b
     left: 50%;
     top: 40%;
     transform: translate(-50%, -50%);
-
     /* Center content of .textBox */
     text-align: center;
 
@@ -44,7 +43,7 @@ so you can style the absolute positioning directly on the image. Size needs to b
 // h1 //
 ////////
 
-.header_headingPrimary {
+.headingPrimary {
   animation-name: fromLeft;
   animation-duration: 5s;
   color: $color-white;
@@ -78,16 +77,16 @@ so you can style the absolute positioning directly on the image. Size needs to b
 /////////////////
 
 @media only screen and (max-width: 850px) {
-  .header_headingPrimary___main {
+  .headingPrimary___main {
     font-size: 5vw;
   }
 
-  .header_headingPrimary___sub {
+  .headingPrimary___sub {
     font-size: 3vw;
   }
 
-  .header_btn:link,
-  .header-btn:visited {
+  .btn:link,
+  .btn:visited {
     font-size: 2vw;
   }
 }

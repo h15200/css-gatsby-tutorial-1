@@ -1,7 +1,7 @@
 import React from "react"
-import gridStyles from "../styles/components/grid.module.scss"
+import gridStyles from "../styles/components/grid.scss"
 
-const gridTest = () => (
+const Grid = () => (
   <section className={gridStyles.gridTest}>
     <div className={gridStyles.row}>
       <div className={gridStyles.col_1_of_2}>Col 1 of 2</div>
@@ -39,4 +39,4 @@ const gridTest = () => (
   </section>
 )
 
-export default gridTest
+export default Grid

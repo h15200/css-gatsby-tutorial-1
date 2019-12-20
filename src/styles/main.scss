@@ -4,5 +4,7 @@
 
 @import './base/base';
 @import './base/animations';
-@import './base/utilities'
+@import './base/utilities';
 
+@import './components/button.scss';
+@import './components/grid.scss';
