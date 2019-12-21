@@ -1,5 +1,9 @@
 import React from "react"
 import aboutStyles from "../styles/layout/about.module.scss"
+import p1 from '../images/p1.jpg'
+import p2 from '../images/p2.jpg'
+import p3 from '../images/p3.jpg'
+
 
 const About = () => (
   <section className={aboutStyles.about}>
@@ -25,10 +29,17 @@ const About = () => (
         <p className={aboutStyles.p}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus cum
           earum neque rem quo id dolor dolorem ipsa, commodi eaque harum
-          accusantium minima fugit quos nam est quidem tempore veritatis?
+          accusantium minima...
         </p>
+        <a href="#" className={aboutStyles.btnText}>Learn more &rarr;</a>
       </div>
-      <div className={aboutStyles.col_1_of_2}>IMAGE content</div>
+      <div className={aboutStyles.col_1_of_2}>
+        <div className={aboutStyles.composition}>
+          <img src={p1} alt="a river" className={`${aboutStyles.composition_photo} ${aboutStyles.composition_photo___1}`}/>
+          <img src={p2} alt="a row boat on a lake" className={`${aboutStyles.composition_photo} ${aboutStyles.composition_photo___2}`}/>
+          <img src={p3} alt="a meadow" className={`${aboutStyles.composition_photo} ${aboutStyles.composition_photo___3}`}/>
+        </div>
+      </div>
     </div>
   </section>
 )

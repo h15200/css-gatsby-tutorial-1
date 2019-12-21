@@ -1,0 +1,45 @@
+@import '../components//grid';
+
+.composition {
+
+  position: relative;
+  width: 100%;
+
+  &_photo {
+    width: 55%;
+    box-shadow: 0 .3rem .6rem rgba($color-black, .4);
+    border-radius: 2px;
+    position: absolute;
+    transition: all .2s;
+
+    &___1 {
+      left: -2rem;
+    }
+
+    &___2 {
+      top: 9rem;
+      left: 4rem;
+    }
+
+    &___3{
+      top: 3rem;
+      left: 12rem;
+    }
+
+    &:hover { 
+      outline: .5rem solid $color-primary;
+      outline-offset: .3rem;
+      // bigger and bigger shadow
+      transform: scale(1.05) translateY(-.4rem);
+      box-shadow: 0 .5rem .6rem rgba($color-black, .4);
+
+      z-index: 1;
+    }
+
+  }
+  // dim elements that are not hovered when one is hovered
+  &:hover &_photo:not(:hover) {
+    opacity: .8;
+  }
+
+}

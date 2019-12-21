@@ -36,14 +36,11 @@ body {
 }
 
 .headingTertiary {
-  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .p {
-  font-size: 1rem;
-
   &:not(:last-child) {
     margin-bottom: 2rem;
   }
