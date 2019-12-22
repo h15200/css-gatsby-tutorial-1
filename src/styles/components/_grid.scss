@@ -14,7 +14,7 @@ $grid-horizontal-gutter: 3.5rem;
     div {
         display: inline-block; // A better alternative to floats if it's on a div
         vertical-align: top; // align the top, not the default bottom
-
+        
         &:not(:last-of-type) {
             margin-right: $grid-horizontal-gutter;
         }

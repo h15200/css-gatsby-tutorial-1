@@ -1,0 +1,27 @@
+@import '../main.scss';
+
+.about {
+  background-color: $color-gray-light-1;
+  padding: 10rem 0;
+  // move up the entire component to cover the white space from the clip path of header w negative margin
+  margin-top: calc(-91vh * 0.15);
+  padding-bottom: 20rem;
+}
+
+.features {
+  padding: 10rem 0;
+  background-image: linear-gradient(to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)),
+    url(../../images/p2.jpg);
+  background-size: cover;
+  background-position: center;
+  // clip-path: polygon(0 20%, 80% 0, 100% 0, 100% 80%, 0 100%);
+  transform: skewY(-7deg);
+  // move up features section to eliminate empty whitespace
+  margin-top: -8rem;
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
