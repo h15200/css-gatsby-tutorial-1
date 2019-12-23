@@ -142,6 +142,57 @@ const Main = () => (
         </div>
       </div>
     </section>
+    <section className={mainStyles.tours}>
+      <div
+        className={`${mainStyles.u_center_text} ${mainStyles.u_margin_bottom_big}`}
+      >
+        <h2 className={mainStyles.headingSecondary}>Most popular tours</h2>
+      </div>
+      <div className={mainStyles.row}>
+        <div className={mainStyles.col_1_of_3}>
+          <div className={mainStyles.card}>
+            <div
+              className={`${mainStyles.card_side} ${mainStyles.card_side___front}`}
+            >
+              front side card 1
+            </div>
+            <div
+              className={`${mainStyles.card_side} ${mainStyles.card_side___back} ${mainStyles.card_side___back___1}`}
+            >
+              back side card 1
+            </div>
+          </div>
+        </div>
+        <div className={mainStyles.col_1_of_3}>
+          <div className={mainStyles.card}>
+            <div
+              className={`${mainStyles.card_side} ${mainStyles.card_side___front}`}
+            >
+              front side card 2
+            </div>
+            <div
+              className={`${mainStyles.card_side} ${mainStyles.card_side___back} ${mainStyles.card_side___back___2}`}
+            >
+              back side card 2
+            </div>
+          </div>
+        </div>
+        <div className={mainStyles.col_1_of_3}>
+          <div className={mainStyles.card}>
+            <div
+              className={`${mainStyles.card_side} ${mainStyles.card_side___front}`}
+            >
+              front side card 3
+            </div>
+            <div
+              className={`${mainStyles.card_side} ${mainStyles.card_side___back} ${mainStyles.card_side___back___3}`}
+            >
+              back side  3
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </Fragment>
 )
 

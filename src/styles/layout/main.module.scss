@@ -21,7 +21,14 @@
   // move up features section to eliminate empty whitespace
   margin-top: -8rem;
 
+
   & > * {
     transform: skewY(7deg);
   }
+}
+
+.tours {
+  margin-top: -6rem;
+  background-color: $color-gray-light-1;
+  padding: 14rem 0;
 }

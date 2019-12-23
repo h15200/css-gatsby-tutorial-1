@@ -1,0 +1,64 @@
+@import '../abstracts/variables';
+
+
+.card {
+  perspective: 22rem;
+  -moz-perspective: 22rem;
+  text-align: center;
+  position: relative;
+  height: 30rem;
+  width: 80%;
+
+  &_side {
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+    height: 100%;
+    border-radius: 1rem;
+   
+    backface-visibility: hidden;
+    box-shadow:0 .3rem .6rem rgba($color-black, .15);
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    &___front {
+      background-color: $color-white;
+      color: $color-black;
+    }
+
+    &___back {
+      transform: rotateY(180deg);
+      // margin-right: $grid-horizontal-gutter;
+
+      &___1 {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+      }
+
+      &___2 {
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+      }
+      
+      &___3 {
+        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+
+      }
+
+    }
+
+  }
+
+  &:hover &_side___front {
+    transform: rotateY(180deg);
+
+  }
+  &:hover &_side___back {
+    transform: rotateY(0deg);
+
+  }
+
+
+
+}

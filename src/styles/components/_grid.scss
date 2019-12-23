@@ -4,7 +4,7 @@ $grid-horizontal-gutter: 3.5rem;
 
 .row {
     max-width: $grid-width;
-
+    text-align: center;
     margin: 0 auto;
 
     &:not(:last-of-type) {
@@ -15,9 +15,10 @@ $grid-horizontal-gutter: 3.5rem;
         display: inline-block; // A better alternative to floats if it's on a div
         vertical-align: top; // align the top, not the default bottom
         
-        &:not(:last-of-type) {
+        &:not(:last-child) {
             margin-right: $grid-horizontal-gutter;
         }
+    
     }
 
     // specify width for each column
