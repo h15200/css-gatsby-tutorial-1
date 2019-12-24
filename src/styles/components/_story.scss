@@ -1,0 +1,72 @@
+@import '../abstracts/variables';
+
+.story {
+  width: 75%;
+  box-shadow: 0 2rem 3.5rem rgba($color-black, .1);
+  background-color: rgba($color-white, .6);
+  border-radius: 3px;
+  text-align: left;
+  padding: 3.5rem;
+  padding-left: 5rem;
+  font-size: 1rem;
+  
+  transform: skewX(-12deg);
+
+  & > * {
+    transform: skewX(12deg);
+  }
+
+  &_shape {
+    width: 10rem;
+    height: 10rem;
+    overflow:hidden;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    transform: translateX(-.8rem) skewX(12deg);
+
+    position: relative;
+    
+
+  }
+
+  &_image {
+    height: 100%;
+    transform: translateX(-3rem) scale(1.4);
+    overflow: hidden;
+    transition: all .4s;
+  }
+
+  &_text {
+
+  }
+
+    &_caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      color: $color-white;
+      opacity: 0;
+      font-size: 1.1rem;
+      text-align: center;
+      text-transform: uppercase;
+      transition: all .4s;
+
+    }
+
+
+    &:hover &_caption {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover &_image {
+      transform: translateX(-3rem) scale(1);
+      filter: blur(2px) brightness(80%);
+
+    }
+}
+ 

@@ -11,6 +11,7 @@ import mainStyles from "../styles/layout/main.module.scss"
 import p1 from "../images/p1.jpg"
 import p2 from "../images/p2.jpg"
 import p3 from "../images/p3.jpg"
+import v1 from "../images/patti.mp4"
 
 const Main = () => (
   <Fragment>
@@ -288,7 +289,83 @@ const Main = () => (
       <div
         className={`${mainStyles.u_center_text} ${mainStyles.u_margin_bottom_big} ${mainStyles.u_margin_top_huge}`}
       >
-        <a href="#" className={`${mainStyles.btn} ${mainStyles.btn___green}`}>Discover all tours</a>
+        <a href="#" className={`${mainStyles.btn} ${mainStyles.btn___green}`}>
+          Discover all tours
+        </a>
+      </div>
+    </section>
+    <section className={mainStyles.stories}>
+      <div className={mainStyles.bgVideo}>
+        <video className={mainStyles.bgVideo_content} autoPlay muted loop>
+          <source src={v1} type="video/mp4" />
+          Your browser is not supported to play this video!
+        </video>
+      </div>
+      <div
+        className={`${mainStyles.u_center_text} ${mainStyles.u_margin_bottom_big}`}
+      >
+        <h2 className={mainStyles.headingSecondary}>
+          We make people geniunely happy
+        </h2>
+      </div>
+      <div className={mainStyles.row}>
+        <div className={mainStyles.story}>
+          <figure className={mainStyles.story_shape}>
+            <img
+              src={p1}
+              alt="Person on a tour"
+              className={mainStyles.story_image}
+            />
+            <figcaption className={mainStyles.story_caption}>
+              Jane Doe
+            </figcaption>
+          </figure>
+          <div className={mainStyles.story_text}>
+            <h3
+              className={`${mainStyles.headingTertiary} ${mainStyles.u_margin_bottom_small}`}
+            >
+              I had the best week ever with my family!
+            </h3>
+            <p className={mainStyles.p}>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
+              accusamus autem reprehenderit minus magni ut officia dolore sit,
+              sunt corporis.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className={mainStyles.row}>
+        <div className={mainStyles.story}>
+          <figure className={mainStyles.story_shape}>
+            <img
+              src={p2}
+              alt="Person on a tour"
+              className={mainStyles.story_image}
+            />
+            <figcaption className={mainStyles.story_caption}>
+              Jake Doe
+            </figcaption>
+          </figure>
+          <div className={mainStyles.story_text}>
+            <h3
+              className={`${mainStyles.headingTertiary} ${mainStyles.u_margin_bottom_small}`}
+            >
+              What a life changing trip!
+            </h3>
+            <p className={mainStyles.p}>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
+              accusamus autem reprehenderit minus magni ut officia dolore sit,
+              sunt corporis.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className={`${mainStyles.u_center_text} ${mainStyles.u_margin_top_huge}`}
+      >
+        <a href="#" className={`${mainStyles.btnText}`}>
+          Read all stories &rarr;
+        </a>
       </div>
     </section>
   </Fragment>
