@@ -2,19 +2,21 @@
 
 
 .card {
+
+  // FUNCTIONALITY
   perspective: 22rem;
   -moz-perspective: 22rem;
-  text-align: center;
+  margin: 0 auto;
   position: relative;
-  height: 30rem;
-  width: 80%;
+  height: 31rem;
+  width: 85%;
 
   &_side {
     width: 100%;
-    color: white;
     font-size: 2rem;
-    height: 100%;
-    border-radius: 1rem;
+    height: 31rem;
+    border-radius: 10px;
+    overflow: hidden;
    
     backface-visibility: hidden;
     box-shadow:0 .3rem .6rem rgba($color-black, .15);
@@ -27,11 +29,13 @@
     &___front {
       background-color: $color-white;
       color: $color-black;
+
+      // to position the header on top of picture
+      position: relative;
     }
 
     &___back {
       transform: rotateY(180deg);
-      // margin-right: $grid-horizontal-gutter;
 
       &___1 {
         background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
@@ -51,7 +55,7 @@
   }
 
   &:hover &_side___front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
 
   }
   &:hover &_side___back {
@@ -59,6 +63,110 @@
 
   }
 
+// FRONT SIDE STYLING
+&_picture {
+  background-size: cover;
+  height: 40%;
+  background-blend-mode: screen;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  -webkit-clip-path:  polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+  &___1 {
+    background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../../images/4.jpg);
+    
+  }
+  &___2 {
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../../images/5.jpg);
+  }
+  &___3 {
+    background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../../images/6.jpg);
+  }
+  
+}
+
+&_heading {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $color-white;
+  position: absolute;
+  top: 20%;
+  right: .5rem;
+  width: 75%;
+  
+
+}
+
+&_heading___span {
+
+  padding: .8rem 1rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+
+  &___1 {
+    background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
+  }
+  &___2 {
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, .85), rgba($color-primary-dark, .85));
+  }
+  &___3 {
+    background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .85), rgba($color-tertiary-dark, .85));
+  }
+
+}
+
+&_details {
+  padding: 1.8rem;
+
+  ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+
+    li {
+      text-align: center;
+      font-size: 1rem;
+      padding: .6rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-gray-light-2;
+      }
+
+    }
+
+  }
+
+}
+//BACKSIDE STYLING
+&_cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+  &_priceBox {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 5rem;
+  }
+
+  &_priceOnly {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  &_priceValue{
+    font-size: 3.5rem;
+    font-weight: 100;
+  }
+
+  & a {
+    font-size: 1rem;
+  }
+
 
 
 }
+

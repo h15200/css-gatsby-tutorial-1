@@ -11,13 +11,14 @@ $grid-horizontal-gutter: 3.5rem;
         margin-bottom: $grid-vertical-gutter;
     }
     // all columns
-    div {
+    > div {
         display: inline-block; // A better alternative to floats if it's on a div
         vertical-align: top; // align the top, not the default bottom
         
         &:not(:last-child) {
             margin-right: $grid-horizontal-gutter;
         }
+       
     
     }
 

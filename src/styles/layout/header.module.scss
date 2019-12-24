@@ -12,7 +12,7 @@
     url(../../images/hero.jpg);
   background-size: cover;
   background-position: right;
-
+  -webkit-clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
   /* To use position absolute on .logo and .textbox */

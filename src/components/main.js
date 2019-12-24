@@ -149,17 +149,48 @@ const Main = () => (
         <h2 className={mainStyles.headingSecondary}>Most popular tours</h2>
       </div>
       <div className={mainStyles.row}>
-        <div className={mainStyles.col_1_of_3}>
+        <div className={`${mainStyles.col_1_of_3} `}>
           <div className={mainStyles.card}>
             <div
               className={`${mainStyles.card_side} ${mainStyles.card_side___front}`}
             >
-              front side card 1
+              <div
+                className={`${mainStyles.card_picture} ${mainStyles.card_picture___1}`}
+              >
+                &nbsp;
+              </div>
+              <h4 className={`${mainStyles.card_heading}`}>
+                <span
+                  className={`${mainStyles.card_heading___span} ${mainStyles.card_heading___span___1}`}
+                >
+                  The Forest Explorer
+                </span>
+              </h4>
+              <div className={mainStyles.card_details}>
+                <ul>
+                  <li>3 day tour</li>
+                  <li>Up to 30 people</li>
+                  <li>2 tour guides</li>
+                  <li>sleep in cozy hotels</li>
+                  <li>Difficulty: very easy</li>
+                </ul>
+              </div>
             </div>
             <div
               className={`${mainStyles.card_side} ${mainStyles.card_side___back} ${mainStyles.card_side___back___1}`}
             >
-              back side card 1
+              <div className={mainStyles.card_cta}>
+                <div className={mainStyles.card_priceBox}>
+                  <p className={mainStyles.card_priceOnly}>Only</p>
+                  <p className={mainStyles.card_priceValue}>$297</p>
+                </div>
+                <a
+                  href="#"
+                  className={`${mainStyles.btn} ${mainStyles.btn___white}`}
+                >
+                  Book now!
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -168,12 +199,43 @@ const Main = () => (
             <div
               className={`${mainStyles.card_side} ${mainStyles.card_side___front}`}
             >
-              front side card 2
+              <div
+                className={`${mainStyles.card_picture} ${mainStyles.card_picture___2}`}
+              >
+                &nbsp;
+              </div>
+              <h4 className={mainStyles.card_heading}>
+                <span
+                  className={`${mainStyles.card_heading___span} ${mainStyles.card_heading___span___2}`}
+                >
+                  The Waterfall Hunter
+                </span>
+              </h4>
+              <div className={mainStyles.card_details}>
+                <ul>
+                  <li>7 day tour</li>
+                  <li>Up to 40 people</li>
+                  <li>6 tour guides</li>
+                  <li>Sleep in provided tens</li>
+                  <li>Difficulty: medium</li>
+                </ul>
+              </div>
             </div>
             <div
               className={`${mainStyles.card_side} ${mainStyles.card_side___back} ${mainStyles.card_side___back___2}`}
             >
-              back side card 2
+              <div className={mainStyles.card_cta}>
+                <div className={mainStyles.card_priceBox}>
+                  <p className={mainStyles.card_priceOnly}>Only</p>
+                  <p className={mainStyles.card_priceValue}>$497</p>
+                </div>
+                <a
+                  href="#"
+                  className={`${mainStyles.btn} ${mainStyles.btn___white}`}
+                >
+                  Book now!
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -182,15 +244,51 @@ const Main = () => (
             <div
               className={`${mainStyles.card_side} ${mainStyles.card_side___front}`}
             >
-              front side card 3
+              <div
+                className={`${mainStyles.card_picture} ${mainStyles.card_picture___3}`}
+              >
+                &nbsp;
+              </div>
+              <h4 className={mainStyles.card_heading}>
+                <span
+                  className={`${mainStyles.card_heading___span} ${mainStyles.card_heading___span___3}`}
+                >
+                  The desert hiker
+                </span>
+              </h4>
+              <div className={mainStyles.card_details}>
+                <ul>
+                  <li>5 day tour</li>
+                  <li>Up to 15 people</li>
+                  <li>3 tour guides</li>
+                  <li>Sleep in provided tens</li>
+                  <li>Difficulty: hard</li>
+                </ul>
+              </div>
             </div>
             <div
               className={`${mainStyles.card_side} ${mainStyles.card_side___back} ${mainStyles.card_side___back___3}`}
             >
-              back side  3
+              <div className={mainStyles.card_cta}>
+                <div className={mainStyles.card_priceBox}>
+                  <p className={mainStyles.card_priceOnly}>Only</p>
+                  <p className={mainStyles.card_priceValue}>$897</p>
+                </div>
+                <a
+                  href="#"
+                  className={`${mainStyles.btn} ${mainStyles.btn___white}`}
+                >
+                  Book now!
+                </a>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+      <div
+        className={`${mainStyles.u_center_text} ${mainStyles.u_margin_bottom_big} ${mainStyles.u_margin_top_huge}`}
+      >
+        <a href="#" className={`${mainStyles.btn} ${mainStyles.btn___green}`}>Discover all tours</a>
       </div>
     </section>
   </Fragment>
