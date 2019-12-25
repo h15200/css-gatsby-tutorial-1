@@ -11,7 +11,7 @@ import mainStyles from "../styles/layout/main.module.scss"
 import p1 from "../images/p1.jpg"
 import p2 from "../images/p2.jpg"
 import p3 from "../images/p3.jpg"
-import v1 from "../images/patti.mp4"
+import v1 from "../images/coverr-grossglockner-mountain-1572020399016.mp4"
 
 const Main = () => (
   <Fragment>
@@ -366,6 +366,80 @@ const Main = () => (
         <a href="#" className={`${mainStyles.btnText}`}>
           Read all stories &rarr;
         </a>
+      </div>
+    </section>
+    <section className={mainStyles.booking}>
+      <div className={mainStyles.row}>
+        <div className={mainStyles.book}>
+          <div className={mainStyles.book_form}>
+            <form action="#" className={mainStyles.form}>
+              <div className={`${mainStyles.u_margin_bottom_medium}`}>
+                <h2 className={mainStyles.headingSecondary}>
+                  Start Booking Now
+                </h2>
+              </div>
+              <div className={mainStyles.form_group}>
+                <input
+                  type="text"
+                  className={mainStyles.form_input}
+                  placeholder="Full Name"
+                  autoComplete="off"
+                  id="name"
+                  required
+                />
+                <label htmlFor="name" className={mainStyles.form_label}>
+                  Full Name
+                </label>
+              </div>
+              <div className={mainStyles.form_group}>
+                <input
+                  type="email"
+                  className={mainStyles.form_input}
+                  autoComplete="off"
+                  placeholder="email Address"
+                  id="email"
+                  required
+                />
+                <label htmlFor="email" className={mainStyles.form_label}>
+                  email
+                </label>
+              </div>
+              <div className={`${mainStyles.form_group}`}>
+                <div className={mainStyles.form_group_radio}>
+                  <input
+                    type="radio"
+                    className={mainStyles.form_radioInput}
+                    id="small"
+                    name="size"
+                  />
+                  <label htmlFor="small" className={mainStyles.form_radioLabel}>
+                    <span className={mainStyles.form_radioButton}></span>
+                    Small tour group
+                  </label>
+                </div>
+                <div className={mainStyles.form_group_radio}>
+                  <input
+                    type="radio"
+                    className={mainStyles.form_radioInput}
+                    id="large"
+                    name="size"
+                  />
+                  <label htmlFor="large" className={mainStyles.form_radioLabel}>
+                    <span className={mainStyles.form_radioButton}></span>
+                    Large tour group
+                  </label>
+                </div>
+              </div>
+              <div className={`${mainStyles.form_group} ${mainStyles.u_margin_top_medium} `} >
+                <button
+                  className={`${mainStyles.btn} ${mainStyles.btn___green}`}
+                >
+                  Next step &rarr;
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   </Fragment>

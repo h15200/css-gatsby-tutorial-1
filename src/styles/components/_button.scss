@@ -1,7 +1,7 @@
 @import '../abstracts/variables';
 
 .btn {
-
+  &,
   &:link,
   &:visited {
     display: inline-block;
@@ -12,6 +12,11 @@
     transition: all 0.2s;
     /* to position the ::after element on top and behind this element */
     position: relative;
+    
+    // change for button elements
+    border: none;
+    cursor: pointer;
+
   }
 
   &:hover {
@@ -19,7 +24,9 @@
     box-shadow: 0 .6rem 1.2rem rgba($color-black, .2);
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline:none;
     transform: translateY(-1px);
     box-shadow: 0 .3rem .6rem rgba($color-black, .2);
   }

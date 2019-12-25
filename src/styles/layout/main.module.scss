@@ -35,7 +35,27 @@
 
 .stories {
   padding: 3rem 0rem;
-
   position: relative;
+}
 
+.booking {
+  padding: 10rem 0;
+  background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+
+
+  .book {
+    background-image: linear-gradient(105deg, rgba($color-white, .6) 0%, rgba($color-white, .9) 50%, transparent 50%),  url(../../images/p3.jpg);
+    background-size: cover;
+    // height: 35rem;
+    width: 65rem;
+    border-radius: $box-radius;
+    box-shadow: 0 .5rem .6rem rgba($color-black, .15);
+    
+    &_form {
+      text-align: left;
+      width: 50%;
+      padding: 3rem;
+    }
+
+  }
 }

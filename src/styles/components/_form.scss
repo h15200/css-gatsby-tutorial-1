@@ -1,0 +1,109 @@
+@import '../abstracts/variables';
+
+.form {
+  
+  &_group:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &_input {
+
+    font-size: 1rem;
+    padding: 1rem 1.3rem;
+    border-radius: 2px;
+    background-color: rgba($color-white, .9);
+    border: none;
+    font-family: inherit;
+    border-bottom: 3px transparent solid;
+    width: 90%;
+    display: block;
+    transition: all .4s;
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-dark-2;
+    }
+
+
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 .7rem 1.4rem rgba($color-black, .1);
+      border-bottom: 3px $color-primary solid; 
+
+      &:invalid {
+        border-bottom: 3px $color-secondary-dark solid;
+      }
+
+      &:valid {
+        border-bottom: 3px $color-primary solid;
+      }
+    }
+  }
+
+  &_input:placeholder-shown ~ &_label {
+    opacity: 0; // this seems redundant, but this is to show the animation transition of .4s
+    visibility: hidden; // to hide element
+    transform: translateY(-3rem);
+  }
+
+  &_label {
+
+    font-size: .8rem;
+    font-weight: 700;
+    transition: all .4s;
+    margin-left: 1.3rem;
+    margin-top: .5rem;
+    display: block;
+  }
+
+  //RADIO
+
+  &_group_radio {
+    display: inline-block;
+    width: 50%;
+  }
+
+  &_radioInput {
+    position: fixed;
+    opacity: 0;
+  }
+
+  &_radioLabel {
+    cursor: pointer;
+    margin-left: .5rem;
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  &_radioButton {
+    height: 1.5rem;
+    width: 1.5rem;
+    border: $color-primary 3px solid;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -.1rem;
+// the circle inside the button that toggles
+    &::after {
+      height: .3rem;
+      width: .3rem;
+      border: $color-primary 3px solid;
+      border-radius: 50%;
+      content: "";
+      display: block; 
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+  }
+
+  &_radioInput:checked ~ label .form_radioButton::after {
+    opacity: 1;
+  }
+
+}
