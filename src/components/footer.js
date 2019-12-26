@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         <div className={footerStyles.col_1_of_2}>
           <p className={footerStyles.footer_copyright}>
-            Built by Hideaki Aomori following Jonas Schedtmann's course
+            Built by Hideaki Aomori following Jonas Schedtmann&apos;s course
           </p>
         </div>
       </div>
