@@ -1,1 +1,66 @@
 @import '../main.scss';
+
+.footer {
+  background-color: $color-gray-dark-3;
+  color: $color-gray-light-1;
+  padding: 4rem 0;
+  font-size: .9rem;
+
+
+  &_logoBox {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  &_logo {
+    margin: 0 auto;
+    width: 7rem;
+    height: auto;
+  }
+
+  &_navigation {
+    border-top: 1px solid $color-gray-dark;
+    padding-top: 1rem;
+    display: inline-block;
+
+  }
+
+  &_list {
+    list-style: none;
+ 
+
+  }
+
+  &_item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+  
+  &_link {
+    transition: all .2s;
+    letter-spacing: .05rem;
+
+    &:link,
+    &:visited {
+    color: inherit;
+    background-color: $color-gray-dark-3;
+    text-decoration: none;
+    display: inline-block;
+    }
+    &:hover,
+    &:active {
+      color: $color-primary;
+      box-shadow: 0 .7rem 1.2rem rgba($color-black, .3);
+      transform: rotate(5deg) scale(1.2);
+    }
+  }
+  &_copyright {
+    word-spacing: .1rem;
+    letter-spacing: .05rem;
+    border-top: 1px solid $color-gray-dark;
+    padding-top: 1rem;
+    display: inline-block;
+  }
+}

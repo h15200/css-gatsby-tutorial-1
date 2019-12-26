@@ -3,7 +3,7 @@ import React, { Fragment } from "react"
 
 import Header from "./header"
 import Main from './main'
-// import footer, put it outside main
+import Footer from './footer'
 
 const Layout = props => (
   <Fragment>
@@ -12,6 +12,7 @@ const Layout = props => (
     <main>
       <Main />
     </main>
+    <Footer />
   </Fragment>
 )
 
