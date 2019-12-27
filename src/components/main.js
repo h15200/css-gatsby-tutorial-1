@@ -143,7 +143,7 @@ const Main = () => (
         </div>
       </div>
     </section>
-    <section className={mainStyles.tours}>
+    <section className={mainStyles.tours} id="sectionTours">
       <div
         className={`${mainStyles.u_center_text} ${mainStyles.u_margin_bottom_big}`}
       >
@@ -186,7 +186,7 @@ const Main = () => (
                   <p className={mainStyles.card_priceValue}>$297</p>
                 </div>
                 <a
-                  href="#"
+                  href="#popup"
                   className={`${mainStyles.btn} ${mainStyles.btn___white}`}
                 >
                   Book now!
@@ -231,7 +231,7 @@ const Main = () => (
                   <p className={mainStyles.card_priceValue}>$497</p>
                 </div>
                 <a
-                  href="#"
+                  href="#popup"
                   className={`${mainStyles.btn} ${mainStyles.btn___white}`}
                 >
                   Book now!
@@ -276,7 +276,7 @@ const Main = () => (
                   <p className={mainStyles.card_priceValue}>$897</p>
                 </div>
                 <a
-                  href="#"
+                  href="#popup"
                   className={`${mainStyles.btn} ${mainStyles.btn___white}`}
                 >
                   Book now!
