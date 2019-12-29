@@ -72,22 +72,4 @@ so you can style the absolute positioning directly on the image. Size needs to b
   }
 
 }
-
-/////////////////
-// MEDIA QUERY //
-/////////////////
-
-@media only screen and (max-width: 850px) {
-  .headingPrimary___main {
-    font-size: 5vw;
-  }
-
-  .headingPrimary___sub {
-    font-size: 3vw;
-  }
-
-  .btn:link,
-  .btn:visited {
-    font-size: 2vw;
-  }
-}
+  

@@ -4,6 +4,25 @@
   padding: 0;
 }
 
+html {
+font-size: 100%;
+
+@include media (big-desktop) {
+  font-size: 110%;
+}
+
+  @include media (tab-land) {
+    font-size: 85%;
+  }
+  @include media (tab-port) {
+    font-size: 70%;
+  }
+  @include media (phone) {
+    font-size: 60%;
+  }
+
+}
+
 body {
   color: $color-gray-dark;
   font-family: "Lato", san-serif;
@@ -27,6 +46,8 @@ body {
   -webkit-text-fill-color: transparent;
 
   transition: all .2s;
+
+
 
   &:hover {
     transform: skew(2deg, 5deg) scale(1.1);
