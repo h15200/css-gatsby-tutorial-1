@@ -10,12 +10,18 @@
   position: relative;
   height: 31rem;
   width: 85%;
+  text-align: center;
 
   @include media(tab-port) {
-    width:100%;
+    width:60%;
+    height: auto;
+    perspective: 50rem;
+
   }
   @include media(phone) {
-    width:100%;
+    width:60%;
+    height: auto;
+    perspective: 50rem;
   }
 
   &_side {

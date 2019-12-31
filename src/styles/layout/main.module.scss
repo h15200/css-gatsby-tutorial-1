@@ -2,10 +2,15 @@
 
 .about {
   background-color: $color-gray-light-1;
-  padding: 10rem 0;
+  padding: 11rem 0 20rem 0;
   // move up the entire component to cover the white space from the clip path of header w negative margin
-  margin-top: calc(-91vh * 0.15);
-  padding-bottom: 20rem;
+  margin-top: -8rem;
+  @include media(tab-port) {
+    padding-bottom: 10rem;
+  }
+  @include media(phone) {
+    padding-bottom: 7rem;
+  }
 }
 
 .features {
@@ -21,6 +26,14 @@
   // move up features section to eliminate empty whitespace
   margin-top: -8rem;
 
+  @include media(tab-port) {
+    padding: 7rem 0;
+  }
+  @include media(phone) {
+    padding: 5rem 0;
+    margin-top: -14rem;
+  }
+
 
   & > * {
     transform: skewY(7deg);
@@ -30,7 +43,7 @@
 .tours {
   margin-top: -6rem;
   background-color: $color-gray-light-1;
-  padding: 10rem 0 8rem 0;
+  padding: 10rem 0 3rem 0;
 }
 
 .stories {
@@ -39,7 +52,7 @@
 }
 
 .booking {
-  padding: 10rem 0;
+  padding: 5rem 0;
   background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 
 

@@ -10,12 +10,25 @@
   &_logoBox {
     text-align: center;
     margin-bottom: 5rem;
+    @include media(tab-port) {
+      margin-bottom: 3rem;
+    }
+    @include media(phone) {
+      margin-bottom: 2rem;
+    }
   }
 
   &_logo {
     margin: 0 auto;
     width: 7rem;
     height: auto;
+
+    @include media(tab-port) {
+      width: 5rem;
+    }
+    @include media(phone) {
+      width: 3rem;
+    }
   }
 
   &_navigation {

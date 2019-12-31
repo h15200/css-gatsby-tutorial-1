@@ -10,6 +10,12 @@
 }
 .u_margin_bottom_big {
   margin-bottom: 5rem;
+  @include media(tab-port) {
+    margin-bottom: 3rem;
+  }
+  @include media(phone) {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .u_margin_top_huge {

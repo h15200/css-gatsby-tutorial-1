@@ -17,10 +17,21 @@
 .featureBox {
   background-color: rgba($color-white, .8);
   font-size: 0.9rem;
-  padding: 4em .8em;
+  padding: 3rem .8rem;
   border-radius: 3px;
   box-shadow: 0 1rem 2.5rem rgba($color-black, .15);
   transition: transform .3s;
+
+  @include media(tab-port) {
+    width: 85%;
+    margin: 0 auto;
+    padding: 2rem .8rem;
+  }
+  @include media(phone) {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem .8rem;
+  }
 
   &_icon {
     font-size: 3.5rem;
