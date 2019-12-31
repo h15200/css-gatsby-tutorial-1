@@ -55,20 +55,33 @@ so you can style the absolute positioning directly on the image. Size needs to b
     display: block;
     font-size: 3.4rem;
     font-weight: 400;
-    letter-spacing: .9em;
+    letter-spacing: 3rem;
+    margin-right: -3rem;
     animation-name: moveFromRight;
     animation-duration: 1.5s;
     animation-timing-function: ease-out;
+
+    @include media (phone) {
+      letter-spacing: 1.5rem;
+      margin-right: -1.5rem;
+    }
   }
 
   &___sub {
     display: block;
     font-size: 1.4rem;
     font-weight: 700;
-    letter-spacing: .8em;
+    letter-spacing: 1rem;
+    margin-right: -1rem;
     animation-name: moveFromLeft;
     animation-duration: 1.5s;
     animation-timing-function: ease-out;
+
+    @include media (phone) {
+      letter-spacing: .5rem;
+      margin-right: -.5rem;
+    }
+
   }
 
 }

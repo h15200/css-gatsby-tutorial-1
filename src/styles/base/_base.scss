@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,7 +10,6 @@ font-size: 100%;
 @include media (big-desktop) {
   font-size: 110%;
 }
-
   @include media (tab-land) {
     font-size: 85%;
   }
@@ -29,6 +28,15 @@ body {
   font-weight: 400;
   line-height: 1.7;
   padding: 1.875rem;
+
+  @include media (tab-port) {
+    padding: 0;
+  }
+  @include media (phone) {
+    padding: 0;
+  }
+
+
 }
 
 // Headers h2 and smaller (h1 is in header.module.scss)
@@ -46,6 +54,13 @@ body {
   -webkit-text-fill-color: transparent;
 
   transition: all .2s;
+
+  @include media (tab-port) {
+    font-size: 1.8rem;
+  }
+  @include media (phone) {
+    font-size: 1.5rem;
+  }
 
 
 

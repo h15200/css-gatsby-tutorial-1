@@ -1,25 +1,62 @@
-$grid-width: 70rem;
-$grid-vertical-gutter: 4rem;
-$grid-horizontal-gutter: 3.5rem;
+$grid-width: 71rem;
+$grid-vertical-gutter: 5rem;
+$grid-vertical-gutter-small: 3.5rem;
+$grid-horizontal-gutter: 3.75rem;
+
 
 .row {
     max-width: $grid-width;
     text-align: center;
     margin: 0 auto;
 
+    @include media(tab-port) {
+        max-width: 50rem;
+    }
+    @include media(tab-port) {
+        max-width: 50rem;
+    }
+
     &:not(:last-of-type) {
         margin-bottom: $grid-vertical-gutter;
+
+        @include media(tab-port) {
+            margin-bottom: $grid-vertical-gutter-small;
+        }
+        @include media(phone) {
+            margin-bottom: $grid-vertical-gutter-small;
+        }
     }
+
+    
     // all columns
-    > div {
+    > div
+    {
+
         display: inline-block; // A better alternative to floats if it's on a div
         vertical-align: top; // align the top, not the default bottom
         
         &:not(:last-child) {
             margin-right: $grid-horizontal-gutter;
+
+            @include media(tab-port){
+                margin-right: 0;
+                margin-bottom: $grid-vertical-gutter-small;
+            }
+            @include media(phone){
+                margin-right: 0;
+                margin-bottom: $grid-vertical-gutter-small;
+            }
         }
        
-    
+        @include media(tab-port) {
+            width: 100% !important;
+
+        }
+
+        @include media(phone) {
+            width: 100% !important;
+
+        }
     }
 
     // specify width for each column

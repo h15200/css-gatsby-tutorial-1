@@ -4,8 +4,11 @@
 
   position: relative;
   width: 100%;
+  height: 20rem;
+
 
   &_photo {
+    margin: 0 auto;
     width: 55%;
     box-shadow: 0 .3rem .6rem rgba($color-black, .4);
     border-radius: 2px;
@@ -13,17 +16,18 @@
     transition: all .2s;
 
     &___1 {
-      left: -2rem;
+      left: 2rem;
+      top: 3rem;
     }
 
     &___2 {
-      top: 9rem;
-      left: 4rem;
+      top: 13rem;
+      left: 7rem;
     }
 
     &___3{
-      top: 3rem;
-      left: 12rem;
+      top: 7rem;
+      left: 17rem;
     }
 
     &:hover { 

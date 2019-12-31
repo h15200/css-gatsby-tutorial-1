@@ -1,9 +1,23 @@
 
+.features .col_1_of_4 {
+  &:not(:last-child) {
+    margin-right: 2rem;
+
+    @include media(tab-port) {
+      margin-right: 0;
+    }
+
+    @include media(phone) {
+      margin-right: 0;
+    }
+
+  }
+}
 
 .featureBox {
   background-color: rgba($color-white, .8);
   font-size: 0.9rem;
-  padding: 3em 1em;
+  padding: 4em .8em;
   border-radius: 3px;
   box-shadow: 0 1rem 2.5rem rgba($color-black, .15);
   transition: transform .3s;
