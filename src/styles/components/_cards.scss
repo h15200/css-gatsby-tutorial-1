@@ -28,7 +28,7 @@
     width: 100%;
     font-size: 2rem;
     height: 31rem;
-    border-radius: 10px;
+    border-radius: 3px;
     overflow: hidden;
    
     backface-visibility: hidden;
@@ -179,7 +179,138 @@
     font-size: 1rem;
   }
 
+///////////////////////////////
+  // MEDIA QUERY TAB PORT //
+////////////////////////////
+@include media(tab-port) {
+  margin: 0 auto;
+  position: relative;
+  height: auto;
+  text-align: center;
+  border-radius: 3px;
+  background-color: $color-white;
+  box-shadow:0 .3rem .6rem rgba($color-black, .15);
+
+  &_side {
+    box-shadow: none;
+    position: relative;
 
 
+    &___back {
+      transform: rotateY(0);
+      clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      -webkit-clip-path:  polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      height: auto;
+      &___1 {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+      }
+
+      &___2 {
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+      }
+      
+      &___3 {
+        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+      }
+    }
+  }
+
+  &:hover &_side___front {
+    transform: rotateY(0);
+  }
+
+
+&_cta {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translate(0);
+  width: 100%;
+  padding: 3rem 4rem 4rem 4rem;
+}
+
+  &_priceBox {
+    margin-bottom: 2rem;
+  }
+
+  &_priceOnly {
+    font-size: 1rem;
+  }
+
+  &_priceValue{
+    font-size: 3.5rem;
+  }
+
+  & a {
+    font-size: 1rem;
+  }
+}
+//////////////////////
+//MEDIA QUERY PHONE//
+//////////////////
+
+@include media(phone) {
+  margin: 0 auto;
+  position: relative;
+  height: auto;
+  text-align: center;
+  border-radius: 3px;
+  background-color: $color-white;
+  box-shadow:0 .3rem .6rem rgba($color-black, .15);
+
+  &_side {
+    box-shadow: none;
+    position: relative;
+
+
+    &___back {
+      transform: rotateY(0);
+      clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      -webkit-clip-path:  polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      height: auto;
+      &___1 {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+      }
+
+      &___2 {
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+      }
+      
+      &___3 {
+        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+      }
+    }
+  }
+
+  &:hover &_side___front {
+    transform: rotateY(0);
+  }
+
+
+&_cta {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translate(0);
+  width: 100%;
+  padding: 3rem 4rem 4rem 3rem;
+}
+
+  &_priceBox {
+    margin-bottom: 2rem;
+  }
+
+  &_priceOnly {
+    font-size: 1rem;
+  }
+
+  &_priceValue{
+    font-size: 3.5rem;
+  }
+
+  & a {
+    font-size: 1rem;
+  }
+}
 }
 

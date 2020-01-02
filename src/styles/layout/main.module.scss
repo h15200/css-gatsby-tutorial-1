@@ -59,7 +59,6 @@
   .book {
     background-image: linear-gradient(105deg, rgba($color-white, .6) 0%, rgba($color-white, .9) 50%, transparent 50%),  url(../../images/p3.jpg);
     background-size: cover;
-    // height: 35rem;
     width: 80%;
     border-radius: $box-radius;
     box-shadow: 0 .5rem .6rem rgba($color-black, .15);
@@ -68,7 +67,31 @@
       text-align: left;
       width: 50%;
       padding: 3rem;
+
+      @include media(tab-land) {
+        width: 70%;
+      }
+      @include media(tab-port) {
+        width: 75%;
+      }
+      @include media(phone) {
+        width: 100%;
+      }
     }
+
+      @include media(tab-land) {
+        background-image: linear-gradient(105deg, rgba($color-white, .6) 0%, rgba($color-white, .9) 70%, transparent 70%),  url(../../images/p3.jpg);
+      }
+
+      @include media(tab-port) {
+        background-image: linear-gradient(105deg, rgba($color-white, .6) 0%, rgba($color-white, .9) 75%, transparent 75%),  url(../../images/p3.jpg);
+
+      }
+
+      @include media(phone) {
+        background-image: linear-gradient(to right, rgba($color-white, .6) 0%, rgba($color-white, .9) 100%),  url(../../images/p3.jpg);
+
+      }
 
   }
 }

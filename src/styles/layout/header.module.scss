@@ -6,6 +6,10 @@
   /* To fit whole page with body padding without scroll bar */
   height: 91vh;
 
+  @include media(phone){
+    height: 50vh;
+  }
+
   /* Hero Banner */
   background-image: linear-gradient(to right bottom,
       rgba($color-primary-light, 0.8),

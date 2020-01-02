@@ -19,6 +19,10 @@
     display: block;
     transition: all .4s;
 
+    @include media(phone) {
+      width: 100%;
+    }
+
     &::-webkit-input-placeholder {
       color: $color-gray-dark-2;
     }

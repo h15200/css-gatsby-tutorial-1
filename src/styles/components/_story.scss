@@ -9,11 +9,26 @@
   padding: 3.5rem;
   padding-left: 5rem;
   font-size: 1rem;
-  
   transform: skewX(-12deg);
+
+  @include media(tab-port) {
+    padding: 2rem;
+    padding-left: 3rem;
+  }
+
+  @include media(phone){
+    padding: 2rem;
+    padding-left: 3rem;
+    transform: skewX(0);
+  }
 
   & > * {
     transform: skewX(12deg);
+
+    @include media(phone) {
+      transform: skewX(0);
+    }
+
   }
 
   &_shape {
@@ -28,6 +43,10 @@
     transform: translateX(-.8rem) skewX(12deg);
 
     position: relative;
+
+    @include media(phone) {
+      transform: translateX(-.8rem) skewX(0)
+    }
     
 
   }
@@ -37,10 +56,6 @@
     transform: translateX(-3rem) scale(1.4);
     overflow: hidden;
     transition: all .4s;
-  }
-
-  &_text {
-
   }
 
     &_caption {
