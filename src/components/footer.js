@@ -8,7 +8,7 @@ const Footer = () => {
     query {
       file(relativePath: { eq: "logo1.png" }) {
         childImageSharp {
-          fluid {
+          fluid (maxWidth: 120) {
             ...GatsbyImageSharpFluid
           }
         }
