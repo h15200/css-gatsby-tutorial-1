@@ -6,14 +6,62 @@ import {
   faMap,
   faHeart,
 } from "@fortawesome/free-solid-svg-icons"
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from "gatsby-image"
 
 import mainStyles from "../styles/layout/main.module.scss"
-import p1 from "../images/p1.jpg"
-import p2 from "../images/p2.jpg"
-import p3 from "../images/p3.jpg"
 import v1 from "../images/coverr-grossglockner-mountain-1572020399016.mp4"
 
-const Main = () => (
+const Main = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    one: file(relativePath: { eq: "p1.jpg" }) {
+      childImageSharp {
+        fluid (maxHeight: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    two: file(relativePath: { eq: "p2.jpg" }) {
+      childImageSharp {
+        fluid (maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    three: file(relativePath: { eq: "p3.jpg" }) {
+      childImageSharp {
+        fluid (maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    four: file(relativePath: { eq: "4.jpg" }) {
+      childImageSharp {
+        fluid (maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    five: file(relativePath: { eq: "5.jpg" }) {
+      childImageSharp {
+        fluid (maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    six: file(relativePath: { eq: "6.jpg" }) {
+      childImageSharp {
+        fluid (maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`)
+
+
+  return (
   <Fragment>
     <section className={mainStyles.about}>
       <div
@@ -52,21 +100,24 @@ const Main = () => (
         </div>
         <div className={mainStyles.col_1_of_2}>
           <div className={mainStyles.composition}>
-            <img
-              src={p1}
-              alt="a river"
-              className={`${mainStyles.composition_photo} ${mainStyles.composition_photo___1}`}
-            />
-            <img
-              src={p2}
-              alt="a row boat on a lake"
-              className={`${mainStyles.composition_photo} ${mainStyles.composition_photo___2}`}
-            />
-            <img
-              src={p3}
-              alt="a meadow"
-              className={`${mainStyles.composition_photo} ${mainStyles.composition_photo___3}`}
-            />
+            <div className={`${mainStyles.composition_photo} ${mainStyles.composition_photo___1}`}>
+              <Img
+                fluid={data.one.childImageSharp.fluid}
+                alt="a river"
+              />
+            </div>
+            <div className={`${mainStyles.composition_photo} ${mainStyles.composition_photo___2}`}>
+              <Img
+                fluid={data.two.childImageSharp.fluid}
+                alt="a row boat on a lake"
+              />
+            </div>
+            <div className={`${mainStyles.composition_photo} ${mainStyles.composition_photo___3}`}>
+              <Img
+                fluid={data.three.childImageSharp.fluid}
+                alt="a meadow"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -311,11 +362,12 @@ const Main = () => (
       <div className={mainStyles.row}>
         <div className={mainStyles.story}>
           <figure className={mainStyles.story_shape}>
-            <img
-              src={p1}
-              alt="Person on a tour"
-              className={mainStyles.story_image}
-            />
+          <div className={`${mainStyles.story_image} `}>
+            <Img
+            fluid={data.one.childImageSharp.fluid}
+            alt="a river"
+          />
+          </div>
             <figcaption className={mainStyles.story_caption}>
               Jane Doe
             </figcaption>
@@ -337,11 +389,12 @@ const Main = () => (
       <div className={mainStyles.row}>
         <div className={mainStyles.story}>
           <figure className={mainStyles.story_shape}>
-            <img
-              src={p2}
-              alt="Person on a tour"
-              className={mainStyles.story_image}
-            />
+          <div className={`${mainStyles.story_image} `}>
+          <Img
+          fluid={data.two.childImageSharp.fluid}
+          alt="Person on tour"
+        />
+        </div>
             <figcaption className={mainStyles.story_caption}>
               Jake Doe
             </figcaption>
@@ -443,6 +496,7 @@ const Main = () => (
       </div>
     </section>
   </Fragment>
-)
+  )
+}
 
 export default Main

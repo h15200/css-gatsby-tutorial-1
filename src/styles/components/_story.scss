@@ -52,8 +52,10 @@
   }
 
   &_image {
+    display: block;
     height: 100%;
-    transform: translateX(-3rem) scale(1.4);
+
+    transform: translateY(1rem) scale(2.5);
     overflow: hidden;
     transition: all .4s;
   }
@@ -79,9 +81,8 @@
     }
 
     &:hover &_image {
-      transform: translateX(-3rem) scale(1);
+      transform: translateX(0) scale(2);
       filter: blur(2px) brightness(80%);
 
     }
 }
- 
