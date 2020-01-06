@@ -5,22 +5,22 @@
 
 @mixin media($breakpoint) {
   @if $breakpoint==phone {
-    @media (max-width: 37.5em) { // 600px
+    @media only screen and (max-width: 37.5em) { // 600px
       @content
     }
   };
   @if $breakpoint==tab-port {
-    @media (min-width: 37.501em) and (max-width: 56.25em) { // 900 px
+    @media only screen and (min-width: 37.501em) and (max-width: 56.25em) { // 900 px
       @content
     }
   };
   @if $breakpoint==tab-land {
-    @media (min-width: 56.2501em) and (max-width: 75em) { // 1200 px
+    @media only screen and (min-width: 56.2501em) and (max-width: 75em) { // 1200 px
       @content
     }
   };
   @if $breakpoint==big-desktop {
-    @media (min-width: 112.5em) { // 1800 px
+    @media only screen and (min-width: 112.5em) { // 1800 px
       @content
     }
   }
